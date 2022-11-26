@@ -58,7 +58,7 @@ const [isMClicked,setMClicked] = useState(false);
       if(targetURL === "Home") targetURL = ""
       
       if(targetURL === `${targetURL}`) 
-      window.open(`http://localhost:5173/${targetURL}`,"_self");
+      window.open(`http://sumitso.info/${targetURL}`,"_self");
 
       
      listEle.forEach((e)=>{
