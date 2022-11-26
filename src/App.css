@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Righteous&display=swap');
+.App{
+    
+    height:500px;
+    width: 100vw;
+}
+
+.home-aritcle-title{
+    font-family: 'Righteous';
+}
+.site-article{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin:50px auto;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+   
+  
+}
+.article-img img{
+    height: 150px;
+    border-radius: 50%
+}
+.article-description{
+    width: 70%;
+    text-align: center;
+}
+
+
