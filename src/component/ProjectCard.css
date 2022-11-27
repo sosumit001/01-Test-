@@ -1,0 +1,44 @@
+/* .project-card-container{
+    animation: cardAnimation 900ms;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Righteous&display=swap');
+.project-card-face{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+    font-family: 'Righteous', serif;
+}
+
+.project-card-face a{
+    color:black;
+    font-size: 1.0rem;
+    border: 1px solid black;
+    padding: 1px;
+    border-radius: 3px;
+    padding: 5px;
+    margin-right: 20px;
+    cursor:alias;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.project-card-face a:focus{
+    color: black;
+}
+.project-card-face a:hover{
+    color: black;
+    background-color: rgb(250, 226, 237);
+}
+.project-card-face a:first-child{
+    background-image: linear-gradient(to right,rgb(245, 248, 255),rgb(255, 255, 255));
+    color: rgb(17, 17, 17);
+}
+
+@keyframes cardAnimation {
+    0%{
+      
+        border-width: 16px;
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
