@@ -4,13 +4,14 @@ import './App.css'
 import Header from './Header'
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
 import Projects from './Projects';
+import img from './assets/sumit-so.jpg'
 
 const SiteArticle = () => {
   
   return(
     <article className="site-article">
       <div className="article-img">
-        <img src="../public/imgs/sumit-so-img.jpg" alt="" />
+        <img src={img} alt="" />
       </div>
       <div className="article-description">
       <span className='home-aritcle-title'>Hi, THIS IS <b style={{"textDecoration":"underline wavy skyblue"}}>SUMIT SO</b></span >
