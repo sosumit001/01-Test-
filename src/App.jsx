@@ -29,8 +29,8 @@ function App() {
       <Router>
       <Routes>
       <Route path='/' element = {<SiteArticle/>}/> 
-      <Route path='/projects' element = {<Projects/>}/> 
-      <Route path='/contacts' element = {<div className='site-projects'>
+      <Route path='/Projects' element = {<Projects/>}/> 
+      <Route path='/Contacts' element = {<div className='site-projects'>
         <p>no contact added yet</p>
       </div>} />
       </Routes>
