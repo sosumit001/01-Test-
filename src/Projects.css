@@ -4,11 +4,21 @@
     flex-direction: column;
     width: 80%;
     height: 400px;
-    margin:50px auto;
+    margin:50px 10%;
     align-items: center;
-    justify-content: center;
+    animation: projectAni;
+    animation-duration: 500ms;
 }
 .project-article{
    text-align: center;
-    width: 100%;
+    width: 0%;
+}
+
+@keyframes projectAni{
+    0%{
+        margin:50px 100%;
+    }
+    100% {
+        margin:50px 10%;
+    }
 }

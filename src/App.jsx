@@ -1,8 +1,7 @@
 
-
 import './App.css'
 import Header from './Header'
-import { BrowserRouter as Router,Route,Routes } from 'react-router-dom';
+import { BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import Projects from './Projects';
 
 const SiteArticle = () => {
@@ -24,12 +23,13 @@ const SiteArticle = () => {
 function App() {
   return (
     <div className="App">
-      <Header/>
+     
       <Router>
+      <Header/>
       <Routes>
       <Route path='/' element = {<SiteArticle/>}/> 
       <Route path='/projects' element = {<Projects/>}/> 
-      <Route path='/contacts' element = {<div className='site-projects'>
+      <Route path='/contact' element = {<div className='site-projects'>
         <p>no contact added yet</p>
       </div>} />
       </Routes>
