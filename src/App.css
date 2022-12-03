@@ -3,6 +3,7 @@
     
     height:500px;
     width: 100vw;
+    overflow: hidden;
 }
 
 .home-aritcle-title{

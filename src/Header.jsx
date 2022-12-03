@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import "./Header.css"
 
 
@@ -10,21 +10,21 @@ const [isMClicked,setMClicked] = useState(false);
 
 
   const handleNavbar = (e) => {
+    var menu = document.querySelector(".site-menu");
 
-    let menu = e.target;
+
+
 
     const actionEle = document.querySelectorAll('.nav-action-ele');
     const listEle = document.querySelectorAll('li');
 
     if(!isMClicked)
     {
-      actionEle.forEach((e,k)=>{
-        (k === 0)? e.style.top = "-100%":e.style.top = "-45%";
-      })
+    
       
      menu.style = "--m-left:10%";
         listEle.forEach((e)=>{
-          e.style = "--a-nav-width:140%";
+          e.style = "--a-nav-width:140%; transform:scale(1)";
         })
      
       setMClicked(true);
@@ -32,40 +32,23 @@ const [isMClicked,setMClicked] = useState(false);
     }
     else
     {
-      actionEle.forEach((e,k)=>{
-        (k === 0)? e.style.top = "0%":e.style.top = "100%";
-      })
+      
       
       menu.style = "--m-left:-10%";
 
         listEle.forEach((e)=>{
-          e.style = "--a-nav-width:0%";
+          e.style = "--a-nav-width:0%; transform:scale(0)";
         })
   
 
       setMClicked(false);
     }
 
+   
+
     }
   
-    const handlePageLocation = (e) =>{
-
-      const lg = "linear-gradient( to right,rgb(109, 176, 238),rgb(247, 202, 202))";
-      
-      let targetEle = e.target;
-      let listEle = document.querySelectorAll('li');
-      let targetURL = e.target.innerHTML;
-      if(targetURL === "Home") targetURL = ""
-      
-      if(targetURL === `${targetURL}`) 
-      window.open(`/${targetURL}`,"_self");
-
-      
-     listEle.forEach((e)=>{
-      (e === targetEle)? e.style = `--${e.innerHTML}:${lg}`:
-      e.style = `--${targetURL}: `
-     })
-    }
+  
 
   
     return(
@@ -77,11 +60,14 @@ const [isMClicked,setMClicked] = useState(false);
             <h1></h1>
           </div>
           <ul className="nav-action-ele">
-            <li  onClick = {handlePageLocation}>Home</li>
-            <li  onClick = {handlePageLocation}>Projects</li>
-            <li  onClick = {handlePageLocation}>Contacts</li>
+            <li  onClick={handleNavbar}><Link to={"/"} >HOME</Link></li>
+            <li  onClick={handleNavbar}><Link to={"/projects"} >PROJECTS</Link></li>
+            <li onClick={handleNavbar}><Link to={"/contact"} >CONTACT</Link></li>
+        
           </ul>
-          
+          <div id="pageType">
+            
+          </div>
       </nav>
     )
 }
